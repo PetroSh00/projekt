@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form><br>
+        <label for="USer">Username</label>
+        <input type="text" id="USer" autofocus placeholder="ViniX">
+        <br>
+        <label>Password <input type="Password" minlength="8" maxlength="20"></label>
+        <br>
+        <label>Phone number<input type="tel" placeholder="+380 **********"></label>
+        <br>
+        <label>datetime-local<input type="datetime-local" placeholder="+380 **********"></label>
+        <br>
+        <label>Напій
+            <br>
+            <input type="checkbox" name="drinks" value="Чай">Чай
+            <input type="checkbox" name="drinks" value="Спрайт">Спрайт
+            <input type="checkbox" name="drinks" value="Сік">Сік
+            <br>
+            <label>
+                <input type="radio" name="drinks" value="Чай">Чай
+                <input type="radio" name="drinks" value="Спрайт">Спрайт
+                <input type="radio" name="drinks" value="Сік">Сік
+            </label>
+        </label>
+        <br>
+        <label>
+            Скількі тобі років
+            <input type="number" name="age" min="13" max="100" step="1" value="12">
+        </label>
+        <br>
+        <label>
+            Рівень шуму
+            <input type="range" name="noise" max="100" min="10" value="20" step="0.5">
+        </label>
+        <p>Selected value: <span class="js-selected-value"></span></p>
+        <button type="submit">
+            OK
+        </button>
+        <script>const rangeInput = document.querySelector('input[type="range"]')
+            const output = document.querySelector('.js-selected-value');
+            rangeInput.addEventListener('input', e => output.textContent = e.target.value)</script>
+    </form>
+</body>
+</html>
